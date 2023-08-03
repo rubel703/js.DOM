@@ -1,0 +1,35 @@
+<!--play,canplay,waiting,pause,playing,progress,ended,volumechange-->
+<Html>
+    <head>
+        <style>
+           
+        </style>
+        <title>
+            media
+        </title>
+    </head>
+    <body>
+        <video muted controls ><source src="song.mp4" type="video/mp4"></video>
+        <script>
+          var video= document.querySelector("video");
+          video.addEventListener("canplay", function(){
+            console.log("canplay");
+          });
+          video.addEventListener("play", function(){
+            console.log("play");
+          });
+          video.addEventListener("pause", function(){
+            console.log("pause");
+          });
+          video.addEventListener("playing", function(){
+            console.log("playing");
+          });
+          video.addEventListener("ended", function(){
+            console.log("Thanks for Watching");
+          });
+          video.addEventListener("volumechange", function(){
+            console.log("Volume Change");
+          });
+        </script>
+    </body>
+</Html>

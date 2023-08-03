@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            button
+        </title>
+    </head>
+    <body>
+     
+     <button onclick="myMessage1()">Click me</button>
+     <button onclick="myMessage2()">Click me</button>
+     <p id="paraid"></p>
+        <script>
+            function myMessage1(){
+                var myvar=document.querySelector("#paraid");
+                myvar.innerHTML="You have click button 1";
+            }
+            function myMessage2(){
+                var myvar1=document.querySelector("#paraid");
+                myvar1.innerHTML="You have click button 2";
+            }
+        </script>
+    </body>
+</html>

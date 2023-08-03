@@ -1,0 +1,25 @@
+<Html>
+    <head>
+        <style>
+           
+        </style>
+        <title>
+            change
+        </title>
+    </head>
+    <body>
+        <label for="name">Name: 
+            <input type="text"name="name"></input>
+        </label>
+        <script>
+            const text=document.querySelector("input");
+           // console.log(text);
+           text.addEventListener('change',changeHandler); 
+           function changeHandler(e){
+            //console.log(e);
+            consol.log(e.type);
+            consol.log(e.target);
+           }
+        </script>
+    </body>
+</Html>

@@ -1,0 +1,45 @@
+
+<Html>
+    <head>
+        <style>
+           body{
+            height: 250vh;
+           }
+        </style>
+        <title>
+            load,unload 
+        </title>
+    </head>
+    <body>
+        <details>
+            <summary>Rubel </summary>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ea aliquid in laborum aspernatur reprehenderit porro sed magnam tempora ratione beatae, quaerat numquam excepturi laboriosam veritatis accusantium reiciendis, repellat facilis!</p>
+        </details>
+        <script>
+          //load, unload, scroll, resize, toggle
+            window.addEventListener("load", function(){
+                console.log("Load");
+            });
+            window.addEventListener("unload", function(){
+                console.log("Un Load");
+            });
+            window.addEventListener("scroll", function(){
+                console.log("scroll");
+            });
+            window.addEventListener("resize", function(){
+                const width=window.outerWidth;
+                const height=window.outerHeight;
+                console.log(`height:${height},width:${width}`);
+                console.log("resize");
+            });
+           /* var details=document.querySelector("details");
+            details.addEventListener('toggle',function(){
+                console.log("Toggle");
+            }); */
+            var details=document.querySelector("details");
+            details.addEventListener('toggle',function(e){
+                console.log(e.target.open);
+            });
+        </script>
+    </body>
+</Html>

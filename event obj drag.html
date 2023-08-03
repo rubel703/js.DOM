@@ -1,0 +1,44 @@
+<!--
+    1. ondragstart
+    2. ondrag
+    3. ondragend
+    4. ondragenter
+    5. ondragleave
+    6. ondragover
+    7. ondrop
+-->
+<html>
+    <head>
+        <style>
+            #div1{
+                height: 10rem;
+                width: 20rem;
+                background-color: pink;
+            }
+        </style>
+        <title>
+            drag event
+        </title>
+    </head>
+    <body>
+        <div id="div1"> </div>
+        <p id="drag1" draggable="true">Hey, Bro</p>
+
+        <script>
+            var div=document.querySelector("div");
+            var para=document.querySelector("p");
+
+            para.addEventListener("dragstart", function(e){
+                e.dataTransfer.setData("Text", e.target.id);
+            });
+            div.addEventListener("dragover", function(e){
+                e.preventDefault(); 
+            });
+            div.addEventListener("drop", function(e){
+                let id=e.dataTransfer.getData("Text");
+                console.log(id);
+                div.appendChild(document.getElementById(id));
+            });
+        </script>
+    </body>
+</html>
